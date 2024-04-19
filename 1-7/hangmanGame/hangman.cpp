@@ -1,3 +1,7 @@
+// Author: Rafael Parisi
+// Creation date: 2024-04-19
+// Alura C++ course exercise - Lesson 2
+
 #include <iostream>
 #include <fstream>
 #include <vector>
