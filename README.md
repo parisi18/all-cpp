@@ -2,6 +2,17 @@ ESSA É A MINHA JORNADA C++ 🇧🇷 // THIS IS MY C++ JOURNEY! 🇺🇸
 
 <details>
 <summary>C++ Journey 1/7 ✔️</summary>
+
+Para rodar o jogo da advinhação 🇧🇷 // To run the guessing game! 🇺🇸 ▶️
+```
+g++ Step1/guessingGame/guessingGame.cpp -o  Step1/guessingGame/guessingGame && ./Step1/guessingGame/guessingGame
+```
+
+Para rodar o jogo da forca 🇧🇷 // To run the hangman game! 🇺🇸 ▶️
+```
+make ./Step1/hangmanGame/hangman && ./Step1/hangmanGame/hangman
+```
+
 <details>
 <summary>C++: CONHECENDO A LINGUAGEM E A STL 🇧🇷</summary> 
   Parabéns! Finalizamos dois projetos do curso de Introdução à Linguagem C++!
@@ -19,6 +30,7 @@ ESSA É A MINHA JORNADA C++ 🇧🇷 // THIS IS MY C++ JOURNEY! 🇺🇸
   Iteramos sob `string` ou vector em C++11 com laços de repetição diferenciados, o que torna a leitura do código mais fácil e sucinto. Ao invés de gerarmos um índice que passa por todas as posições de um vetor, reduzimos apenas para a variável a ser iterada direto na letra que é parte da `palavra-secreta`.
   
   Mais para o final do projeto, aprendemos a lidar com arquivos externos; como fazer a leitura destes com `ifstream` e sua escrita com `ofstream`, os quais são sintaxes bastante parecidas com `cin` e `cout` respectivamente.
+
 </details>
 
 <details>
@@ -38,6 +50,9 @@ ESSA É A MINHA JORNADA C++ 🇧🇷 // THIS IS MY C++ JOURNEY! 🇺🇸
   We iterated over `string` or vector in C++11 with different repetition loops, which makes reading the code easier and more concise. Instead of generating an index that goes through all the positions of a vector, we reduced it only to the variable to be iterated directly in the letter that is part of the secret word.
   
   Towards the end of the project, we learned how to deal with external files; how to read them with `ifstream` and write them with `ofstream`, which have syntaxes very similar to `cin` and `cout` respectively.
+
+</details>
+
 </details>
 </details>
 
