@@ -192,7 +192,8 @@ void finish_game(){
                     std::cout << "Could not save the file." << std::endl;
                 else
                     std::cout << "Word added!" << std::endl;
-            }
+            }else
+                std::cout << "No word added." << std::endl;
         }else
             std::cout << "Thanks for playing!" << std::endl;
     }
