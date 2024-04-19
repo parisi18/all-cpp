@@ -106,7 +106,7 @@ void check_guess(char guess){
 std::vector<std::string> read_file(){
     std::ifstream file;
     std::vector<std::string>words;
-    file.open("Step1/hangmanGame/words.txt");
+    file.open("Step1_knowing_the_language/hangmanGame/words.txt");
 
     if(file.is_open()){
         int words_quantity;
@@ -155,7 +155,7 @@ std::vector<std::string> add_word(){
 
 bool save_file(std::vector<std::string> words){
     std::ofstream file;
-    file.open("Step1/hangmanGame/words.txt");
+    file.open("Step1_knowing_the_language/hangmanGame/words.txt");
 
     if(file.is_open()){
         file << words.size() << std::endl;

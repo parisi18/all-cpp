@@ -5,12 +5,12 @@ ESSA É A MINHA JORNADA C++ 🇧🇷 // THIS IS MY C++ JOURNEY! 🇺🇸
 
 Para rodar o jogo da advinhação 🇧🇷 // To run the guessing game! 🇺🇸 ▶️
 ```
-g++ Step1/guessingGame/guessingGame.cpp -o  Step1/guessingGame/guessingGame && ./Step1/guessingGame/guessingGame
+g++ Step1_knowing_the_language/guessingGame/guessingGame.cpp -o  Step1_knowing_the_language/guessingGame/guessingGame && ./Step1_knowing_the_language/guessingGame/guessingGame
 ```
 
 Para rodar o jogo da forca 🇧🇷 // To run the hangman game! 🇺🇸 ▶️
 ```
-make ./Step1/hangmanGame/hangman && ./Step1/hangmanGame/hangman
+make ./Step1_knowing_the_language/hangmanGame/hangman && ./Step1_knowing_the_language/hangmanGame/hangman
 ```
 
 <details>
