@@ -86,6 +86,7 @@ int main(){
     std::cout << "*********************************" << std::endl;
     std::cout << "* Welcome to the guessing game! *" << std::endl;
     std::cout << "*********************************" << std::endl;
+    std::cout << "Guess the secret number between 0 and 99!" << std::endl;
 
     std::cout << "Choose your difficulty level:" << std::endl;
     std::cout << "Easy (E), Medium (M) or Hard (H)" << std::endl;
