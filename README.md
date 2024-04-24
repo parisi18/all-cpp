@@ -53,6 +53,8 @@ make ./Step1_knowing_the_language/hangmanGame/hangman && ./Step1_knowing_the_lan
 
 </details>
 
-</details>
-</details>
+![image](https://github.com/parisi18/all-cpp/assets/66031419/4a199280-3e26-4f08-b83b-0ba4f5c8b132)
 
+![image](https://github.com/parisi18/all-cpp/assets/66031419/f3565fff-dd00-43e2-9dda-ef7dfae5bfb7)
+
+</details>
