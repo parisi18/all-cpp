@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include "not_guessed.hpp"
 #include "show_hangman.hpp"
