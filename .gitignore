@@ -4,3 +4,4 @@
 */guessingGame/guessingGame
 */hangmanGame/hangman
 *.out
+*.o
