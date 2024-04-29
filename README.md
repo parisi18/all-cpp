@@ -69,7 +69,7 @@ g++ Step2_advancing_the_lang/hangmanGame/*.cpp -o hangman.out && ./hangman.out
 
 <details>
 <summary>AVANÇANDO COM C++: ENTENDA MELHOR A LINGUAGEM 🇧🇷</summary> 
-  Parabéns por terem finalizado esse treinamento de `C++`. 
+  Parabéns por terem finalizado esse treinamento de C++. 
 
   Primeiro nós vimos como trabalhar de forma mais profissional, invés de ter todos os arquivos aqui, todas as funções no mesmo arquivo, nós começamos a separar em arquivos diferentes. E nesse processo, nós entendemos o motivo para termos `arquivos de cabeçalho`, nós entendemos como funciona o processo de `compilação` e de `linking`, nós conhecemos algumas estrutura como `instruções` e `pré-processamento`.
 
