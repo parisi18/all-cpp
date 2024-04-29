@@ -5,3 +5,7 @@
 */hangmanGame/hangman
 *.out
 *.o
+Step2_advancing_the_lang/hangman-ws/hangman-ws/build-Debug
+#Auto Generated makefile by CodeLite IDE
+*.mk
+*.codelite
