@@ -58,3 +58,45 @@ make ./Step1_knowing_the_language/hangmanGame/hangman && ./Step1_knowing_the_lan
 ![image](https://github.com/parisi18/all-cpp/assets/66031419/f3565fff-dd00-43e2-9dda-ef7dfae5bfb7)
 
 </details>
+
+<details>
+<summary>C++ Journey 2/7 ✔️</summary>
+
+Para rodar o jogo da forca 🇧🇷 // To run the hangman game! 🇺🇸 ▶️
+```
+g++ Step2_advancing_the_lang/hangmanGame/*.cpp -o hangman.out && ./hangman.out 
+```
+
+<details>
+<summary>AVANÇANDO COM C++: ENTENDA MELHOR A LINGUAGEM 🇧🇷</summary> 
+  Parabéns por terem finalizado esse treinamento de `C++`. 
+
+  Primeiro nós vimos como trabalhar de forma mais profissional, invés de ter todos os arquivos aqui, todas as funções no mesmo arquivo, nós começamos a separar em arquivos diferentes. E nesse processo, nós entendemos o motivo para termos `arquivos de cabeçalho`, nós entendemos como funciona o processo de `compilação` e de `linking`, nós conhecemos algumas estrutura como `instruções` e `pré-processamento`.
+
+  Nós utilizamos o `pragma once`, então nós começamos a entender por baixo dos panos como as coisas funcionam, só que para não precisar ter esse trabalho todo, nós começamos a utilizar uma `IDE`. No meu caso, utilizei a `CodeLite` no Ubuntu.
+
+  Enfim, nós aprendemos a trabalhar de forma mais profissional e nós começamos a conhecer funcionalidades do C++, como `static` para manter um valor, um `símbolo dentro daquela unidade de tradução`, da `translation unit`.
+
+  Nós aprendemos sobre referências, aprendemos sobre referências `constantes`, vimos sobre `namespaces`, `resolução de namespaces`, `gerenciamento de memória`.
+
+</details>
+
+<details>
+<summary>MOVING FORWARD WITH C++: UNDERSTAND THE LANGUAGE BETTER 🇺🇸</summary> 
+  Congratulations on completing this C++ training.
+  
+  First, we learned how to work more professionally. Instead of having all the files here, all the functions in the same file, we started to separate them into different files. And in this process, we understood the reason for having `header files`, we understood how the `compilation` and `linking` process works, we got to know some structures like instructions and preprocessing.
+  
+  We used `pragma once`, so we started to understand how things work under the hood, but to avoid having all this work, we started using an `IDE`. In my case, I used `CodeLite` on Ubuntu.
+  
+  In the end, we learned to work more professionally and we started to get to know C++ features, like `static` to keep a value, a `symbol within that translation unit`.
+  
+  We learned about references, learned about `const` references, saw about `namespaces`, `namespace resolution`, `memory management`.
+</details>
+
+![image](https://github.com/parisi18/all-cpp/assets/66031419/da8b3283-97ac-479d-8848-c46fe33fa396)
+
+![image](https://github.com/parisi18/all-cpp/assets/66031419/103ea98b-2c03-4460-a80f-8983dd8696aa)
+
+
+</details>
