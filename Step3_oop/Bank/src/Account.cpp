@@ -2,7 +2,7 @@
 
 int Account::total_accounts = 0;
 
-Account::Account(std::string number, Holder holder) 
+Account::Account(int number, Holder holder) 
     : m_number(number), m_holder(holder) {
         total_accounts++;
     }
@@ -47,4 +47,12 @@ float show_balance(const Account &account){
 
 int Account::get_total_accounts(){
     return total_accounts;
+}
+
+int Account::get_number() const{
+    return m_number;
+}
+
+Holder Account::get_holder() const{
+    return m_holder;
 }

@@ -9,6 +9,8 @@ class Holder
 public:
     Holder(Cpf cpf, std::string name);
     ~Holder();
+    std::string get_name() const;
+
 private:
     void verifyHolderName(std::string name);
 

@@ -7,6 +7,9 @@ Holder::~Holder() {}
 void Holder::verifyHolderName(std::string holder_name){
     if(holder_name.size() < 5){
         std::cout << "Invalid holder name" << std::endl;
-        exit(1);
     }
+}
+
+std::string Holder::get_name() const{
+    return m_name;
 }

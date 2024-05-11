@@ -1,17 +1,15 @@
+// Author: Rafael Parisi
+// Creation date: 2024-05-06
+// Alura C++ course exercise - Lesson 3
+
 #include <iostream>
-#include "Account.hpp"
-#include "Holder.hpp"
-#include "Cpf.hpp"
+#include "Atm.hpp"
+
 int main(){
-
-    Holder holder(Cpf("123.456.789-00"), "John Doe");
-    Account account = Account("1234", holder);
-
-    account.deposit(1000);
-
-    Account account2 = Account("5678", holder);
-
-    std::cout << "Account quantity: " << Account::get_total_accounts() << std::endl;
-
+    
+    std::cout << "Welcome to the Fake ATM!" << std::endl;
+    Atm* atm = new Atm();
+    atm->init_atm();
+    
     return 0;
 }

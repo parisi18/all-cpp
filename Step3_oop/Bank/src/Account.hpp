@@ -7,16 +7,17 @@
 class Account
 {
 public:
-    Account(std::string number, Holder holder);
+    Account(int number, Holder holder);
     ~Account();
     void withdraw(float value);
     void deposit(float value);
     float getBalance() const;
+    int get_number() const;
+    Holder get_holder() const;
     static int get_total_accounts();
-
 private:
     static int total_accounts;
-    std::string m_number;
+    int m_number;
     Holder m_holder;
     float m_balance;
 };
