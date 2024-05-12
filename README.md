@@ -109,6 +109,10 @@ Crie sua conta no banco! 🇧🇷 // Create your bank account! 🇺🇸 ▶️
 g++ Step3_oop/Bank/src/*.cpp -o Step3_oop/Bank/src/bank.o && ./Step3_oop/Bank/src/bank.o
 ```
 
+⚠️ Adicionei por conta própria as classes `Atm` e `AccountManager`, para que os conceitos pudessem ser utilizados de forma mais dinâmica. Fique a vontade para testar. 🇧🇷
+
+⚠️ I added the `Atm` and `AccountManager` classes on my own, so that the concepts could be used more dynamically. Feel free to test it out. 🇺🇸
+
 <details>
 <summary>ORIENTAÇÃO A OBJETOS COM C++: CLASSES, MÉTODOS E ATRIBUTOS 🇧🇷</summary> 
 Parabéns por ter chegado ao final desse treinamento em que nós vimos sobre `programação orientada a objetos` usando C++!   
