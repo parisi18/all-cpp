@@ -10,7 +10,7 @@ public:
 private:
     void verifyHolderName(std::string name);
 
-private:
+protected:
     Cpf m_cpf;
     std::string m_name;
 };

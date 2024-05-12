@@ -10,4 +10,5 @@ class Holder : public Person
 public:
     Holder(Cpf cpf, std::string name);
     ~Holder();
+    std::string get_name() const;
 };
