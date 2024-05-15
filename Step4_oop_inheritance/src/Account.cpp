@@ -3,7 +3,7 @@
 int Account::total_accounts = 0;
 
 Account::Account(int number, Holder holder) 
-    : m_number(number), m_holder(holder) {
+    : m_number(number), m_holder(holder), m_balance(0){
         total_accounts++;
     }
 
@@ -18,12 +18,15 @@ void Account::withdraw(float value){
         return;
     }
 
-    if(value > this->m_balance){
+    float tax = value * get_interest_rate();
+    float total_value = value + tax;
+
+    if(total_value > m_balance){
         std::cout << "Insufficient funds" << std::endl;
         return;
     }
     
-    this->m_balance -= value;
+    m_balance -= total_value;
 }
 
 void Account::deposit(float value){
@@ -32,7 +35,7 @@ void Account::deposit(float value){
         return;
     }
 
-    this->m_balance += value;
+    m_balance += value;
 }
 
 float Account::getBalance() const{
@@ -55,4 +58,12 @@ int Account::get_number() const{
 
 Holder Account::get_holder() const{
     return m_holder;
+}
+
+float Account::get_interest_rate() const{
+    return m_interest_rate;
+}
+
+short int Account::get_account_type() const{
+    return m_account_type;
 }
