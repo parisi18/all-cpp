@@ -13,10 +13,10 @@ public:
     Atm();
     ~Atm();
     void init_atm();
-    void show_menu();
+    inline void show_menu();
+    inline void show_logged_menu();
     void deposit(int amount);
     void withdraw(int amount);
-    void show_logged_menu();
     void create_account_prompt();
     int getBalance();
 private:
