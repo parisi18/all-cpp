@@ -10,6 +10,7 @@ int main(){
     std::cout << "Welcome to the Fake ATM!" << std::endl;
     Atm* atm = new Atm();
     atm->init_atm();  
+    delete atm;
     
     return 0;
 }
