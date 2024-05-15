@@ -1,9 +1,15 @@
+#pragma once
+
 #include <iostream>
 #include <string>
+#include <vector>
+
+#include "Cpf.hpp"
 #include "Holder.hpp"
 #include "Account.hpp"
-#include "Cpf.hpp"
-#include <vector>
+#include "SavingsAccount.hpp"
+#include "CheckingAccount.hpp"
+#include "AccountType.hpp"
 
 class AccountManager{
 public:
@@ -19,6 +25,7 @@ public:
     bool available_accounts();
     Account* get_account(int account_index);
     Account* login(int account_index);
+    Account* selectAccountType(int account_ty, Holder& holder, std::vector<Account*>& m_accounts);
 
 private:
     static int account_index;
