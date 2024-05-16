@@ -9,7 +9,8 @@ class Worker : public Person
 public:
     Worker(Cpf cpf, std::string name, float salary);
     ~Worker();
-    std::string get_name() const;
+    float get_salary() const;
+    virtual float compensation() const = 0;
 private:
     float m_salary;
 };

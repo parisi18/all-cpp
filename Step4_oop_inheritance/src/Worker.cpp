@@ -4,7 +4,7 @@ Worker::Worker(Cpf cpf, std::string name, float salary) : Person(cpf, name), m_s
 
 Worker::~Worker(){}
 
-std::string Worker::get_name() const
+float Worker::get_salary() const
 {
-    return m_name;
+    return m_salary;
 }
