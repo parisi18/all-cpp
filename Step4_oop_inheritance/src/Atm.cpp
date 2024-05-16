@@ -12,7 +12,7 @@ void Atm::show_menu(){
     std::cout << "Choose an option: " << std::endl;
     std::cout << "0 - Create account" << std::endl;
     std::cout << "1 - Login to account" << std::endl;
-    std::cout << "6 - Exit" << std::endl;
+    std::cout << "7 - Exit" << std::endl;
     std::cout << "Option: ";
 }
 
@@ -20,9 +20,13 @@ void Atm::show_logged_menu(){
     std::cout << "Choose an option: " << std::endl;
     std::cout << "2 - Deposit" << std::endl;
     std::cout << "3 - Withdraw" << std::endl;
-    std::cout << "4 - Show balance" << std::endl;
-    std::cout << "5 - Logout" << std::endl;
-    std::cout << "6 - Exit" << std::endl;
+
+    if(m_logged_account->get_account_type() == AccountType::Type::CHECKING)
+        std::cout << "4 - Transfer" << std::endl; // "Transfer" option added
+
+    std::cout << "5 - Show balance" << std::endl;
+    std::cout << "6 - Logout" << std::endl;
+    std::cout << "7 - Exit" << std::endl;
     std::cout << "Option: ";
 }
 
@@ -36,7 +40,7 @@ void Atm::create_account_prompt(){
 
 void Atm::init_atm(){
     int option;
-    int amount;
+    int amount, destination_account;
     Account *new_account;
 
     do{
@@ -51,7 +55,7 @@ void Atm::init_atm(){
 
         switch (option)
         {
-        case 0:
+        case AtmOption::Option::CREATE_ACCOUNT:
             new_account = m_account_manager->create_account();
 
             if(new_account){
@@ -64,9 +68,10 @@ void Atm::init_atm(){
                     break;
             }else
                 std::cout << "Account not created, try again." << std::endl;
+                std::cout << std::endl;
 
             break;
-        case 1:
+        case AtmOption::Option::LOGIN:
             int account_index;
 
             if(m_account_manager->available_accounts()){
@@ -84,28 +89,34 @@ void Atm::init_atm(){
                 create_account_prompt();
  
             break;
-        case 2:
+        case AtmOption::Option::DEPOSIT:
             std::cout << "Enter the amount to deposit: ";
             std::cin >> amount;
             m_account_manager->deposit(m_account_manager->get_account_number(m_logged_account), amount);
             break;
-        case 3:
+        case AtmOption::Option::WITHDRAW:
             std::cout << "Enter the amount to withdraw: ";
             std::cin >> amount;
             m_account_manager->withdraw(m_account_manager->get_account_number(m_logged_account), amount);
             break;
-        case 4:
-            std::cout << "Balance: " << m_logged_account->getBalance() << std::endl;
+        case AtmOption::Option::TRANSFER:
+            std::cout << "Enter the destination account: ";
+            std::cin >> destination_account;
+            m_account_manager->transfer(m_account_manager->get_account_number(m_logged_account), destination_account);
             break;
-        case 5:
+        case AtmOption::Option::SHOW_BALANCE:
+            std::cout << "Balance: " << m_account_manager->get_balance(m_account_manager->get_account_number(m_logged_account)) << std::endl;
+            std::cout << std::endl;
+            break;
+        case AtmOption::Option::LOGOUT:
             m_logged_account = nullptr;
             break;
-        case 6:
+        case AtmOption::Option::EXIT:
             std::cout << "Exiting..." << std::endl;
             break;
         default:
             std::cout << "Invalid option" << std::endl;
             break;
         }
-    } while (option != 6);
+    } while (option != AtmOption::Option::EXIT);
 }
