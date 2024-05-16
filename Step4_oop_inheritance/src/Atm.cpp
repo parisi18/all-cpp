@@ -9,6 +9,7 @@ Atm::~Atm(){
 }
 
 void Atm::show_menu(){
+    std::cout << std::endl;
     std::cout << "Choose an option: " << std::endl;
     std::cout << "0 - Create account" << std::endl;
     std::cout << "1 - Login to account" << std::endl;
@@ -17,6 +18,7 @@ void Atm::show_menu(){
 }
 
 void Atm::show_logged_menu(){
+    std::cout << std::endl;
     std::cout << "Choose an option: " << std::endl;
     std::cout << "2 - Deposit" << std::endl;
     std::cout << "3 - Withdraw" << std::endl;
@@ -42,9 +44,11 @@ void Atm::init_atm(){
     int option;
     int amount, destination_account;
     Account *new_account;
+    std::pair<Login::Response, Account*> login_response;
 
     do{
         if(m_logged_account){
+            std::cout << std::endl;
             std::cout << "Logged account: " << m_account_manager->get_account_number(m_logged_account) << std::endl;
             std::cout << "Welcome " << m_logged_account->get_holder().get_name() << "!" << std::endl;
             show_logged_menu();
@@ -78,7 +82,20 @@ void Atm::init_atm(){
                 std::cout << "Enter the account number: ";
                 std::cin >> account_index;
 
-                m_logged_account = m_account_manager->login(account_index);
+                std::cout << "Enter the password: ";
+                std::string password;
+                std::cin >> password;
+
+                login_response = m_account_manager->login(account_index, password);
+
+                if(login_response.first == Login::Response::SUCCESS)
+                    m_logged_account = login_response.second;
+                else if(login_response.first == Login::Response::INVALID_PASSWORD)
+                    break;
+                else if(login_response.first == Login::Response::INVALID_ACCOUNT)
+                    break;
+                else
+                    break;
 
                 if(!m_logged_account){
                     std::cout << "Account not found!" << std::endl;
