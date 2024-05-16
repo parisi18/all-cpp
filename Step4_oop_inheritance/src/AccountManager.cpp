@@ -8,7 +8,7 @@ AccountManager::~AccountManager(){
 }
 
 Account* AccountManager::create_account(){
-    std::string holder_cpf, holder_name;
+    std::string holder_cpf, holder_name, holder_password;
 
     std::cout << "Please, enter a CPF with this example format 123.456.789-10: " << std::endl;
     std::cin >> holder_cpf;
@@ -17,11 +17,17 @@ Account* AccountManager::create_account(){
 
     std::cout << "Please, enter a name: " << std::endl;
     std::cin >> holder_name;
-
+    
     //TODO: Validate name
 
+
+    std::cout << "Please, enter a password: " << std::endl;
+    std::cin >> holder_password;
+
+    //TODO: Store and validate password
+
     std::cout << "Creating an account for " << holder_name << " with CPF: " << holder_cpf << "." << std::endl;
-    Holder holder(Cpf(holder_cpf), holder_name);
+    Holder holder(Cpf(holder_cpf), holder_name, holder_password);
 
     std::cout << "Select the account type: " << std::endl;
     std::cout << "1 - Savings Account" << std::endl;
@@ -31,7 +37,7 @@ Account* AccountManager::create_account(){
     std::cin >> option;
 
     Account* created_account = selectAccountType(option, holder, m_accounts);
-    std::cout <<"Account created with number: " << Account::get_total_accounts() << "." << std::endl;
+    std::cout <<"Account created with number: " << created_account->get_number() << "." << std::endl;
 
     if(created_account)
         std::cout << "Account created successfully!" << std::endl;
@@ -79,14 +85,30 @@ float AccountManager::get_balance(int account_index){
     return account->getBalance();
 }
 
-Account* AccountManager::login(int account_index){
+std::pair<Login::Response, Account*> AccountManager::login(int account_index, std::string password){
+    
+    try {
+        Account* account = get_account(account_index);
+        if(!account){
+            std::cout << "Invalid account." << std::endl;
+            std::cout << std::endl;
+            throw Login::Response::INVALID_ACCOUNT;
+        }
 
+        if(!account->get_holder().authenticate(password)){
+            std::cout << "Invalid password." << std::endl;
+            std::cout << std::endl;
+            throw Login::Response::INVALID_PASSWORD;
+        }
+        
+        return {Login::Response::SUCCESS, account};
 
-    Account* account = get_account(account_index);
-    if(!account)
-        return nullptr;
-
-    return account;
+    } catch(Login::Response& response) {
+        return {response, nullptr};
+    } catch(...) {
+        std::cout << "An unknown error occurred." << std::endl;
+        return {Login::Response::UNKNOWN_ERROR, nullptr};
+    }
 }
 
 bool AccountManager::available_accounts(){

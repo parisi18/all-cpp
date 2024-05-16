@@ -10,6 +10,7 @@
 #include "SavingsAccount.hpp"
 #include "CheckingAccount.hpp"
 #include "utils.hpp"
+#include "Auth.hpp"
 
 class AccountManager{
 public:
@@ -25,7 +26,7 @@ public:
     bool available_accounts();
     Account* create_account();
     Account* get_account(int account_index);
-    Account* login(int account_index);
+    std::pair<Login::Response, Account*> login(int account_index, std::string password);
     Account* selectAccountType(int account_ty, Holder& holder, std::vector<Account*>& m_accounts);
 
 private:

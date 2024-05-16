@@ -19,3 +19,12 @@ namespace AtmOption{
         EXIT = 7
     };
 }
+
+namespace Login{
+    enum Response{
+        SUCCESS = 0,
+        INVALID_ACCOUNT = 1,
+        INVALID_PASSWORD = 2,
+        UNKNOWN_ERROR = 3
+    };
+}
