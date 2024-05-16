@@ -1,14 +1,8 @@
 #include "Worker.hpp"
 
-Worker::Worker(Cpf cpf, std::string name, float salary) : Person(cpf, name), m_salary(salary)
-{
-    std::cout << "Worker created!" << std::endl;
-}
+Worker::Worker(Cpf cpf, std::string name, float salary) : Person(cpf, name), m_salary(salary){}
 
-Worker::~Worker()
-{
-    std::cout << "Worker destroyed!" << std::endl;
-}
+Worker::~Worker(){}
 
 std::string Worker::get_name() const
 {
