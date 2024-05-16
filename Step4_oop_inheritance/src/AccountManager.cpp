@@ -74,7 +74,7 @@ void AccountManager::withdraw(int account_index, int amount){
     account->withdraw(amount);
 }
 
-int AccountManager::get_balance(int account_index){
+float AccountManager::get_balance(int account_index){
     Account* account = get_account(account_index);
     return account->getBalance();
 }
@@ -114,4 +114,34 @@ Account* AccountManager::get_account(int account_index){
         return nullptr;
     
     return m_accounts[account_index];
+}
+
+void AccountManager::transfer(int account_index, int account_index_dest){
+    Account* account = get_account(account_index);
+    Account* account_dest = get_account(account_index_dest);
+
+    if(!account || !account_dest || account == account_dest){
+        std::cout << "Invalid accounts." << std::endl;
+        std::cout << std::endl;
+        return;
+    }
+
+    std::cout << "Enter the amount to transfer: ";
+    int amount;
+    std::cin >> amount;
+
+    if(!account->withdraw(amount)){
+        std::cout << "Transfer failed." << std::endl;
+        std::cout << std::endl;
+        return;
+    }
+    
+    if(!account_dest->deposit(amount)){
+        std::cout << "Transfer failed." << std::endl;
+        std::cout << std::endl;
+        return;
+    }
+
+    std::cout << "Transfer completed." << std::endl;
+    std::cout << std::endl;
 }
