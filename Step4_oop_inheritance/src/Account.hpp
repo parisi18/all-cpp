@@ -9,14 +9,14 @@ class Account
 public:
     Account(int number, Holder holder);
     virtual ~Account();
-    void withdraw(float value);
-    void deposit(float value);
-    float getBalance() const;
-    int get_number() const;
-    Holder get_holder() const;
-    static int get_total_accounts();
     virtual float get_interest_rate() const = 0; // Pure virtual function
     virtual short int get_account_type() const = 0; // Pure virtual function
+    bool withdraw(float value);
+    bool deposit(float value);
+    float getBalance() const;
+    int get_number() const;
+    static int get_total_accounts();
+    Holder get_holder() const;
 
 public:
     // 1 - Checking Account
