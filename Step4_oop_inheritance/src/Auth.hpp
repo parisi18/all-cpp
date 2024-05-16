@@ -6,7 +6,7 @@ class Auth{
 public:
     Auth(std::string password);
     ~Auth();
-    bool authenticate(std::string password) const;
+    virtual bool authenticate(std::string password) const = 0;
 
 private:
     std::string m_password;

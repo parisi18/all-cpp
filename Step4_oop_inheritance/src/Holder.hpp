@@ -11,4 +11,5 @@ class Holder : public Person, Auth
 public:
     Holder(Cpf cpf, std::string name, std::string password);
     ~Holder();
+    bool authenticate(std::string password) const override;
 };
