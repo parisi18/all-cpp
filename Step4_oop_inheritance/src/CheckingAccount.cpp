@@ -36,3 +36,7 @@ void CheckingAccount::transfer(float value, Account& destination_account){
     m_balance -= total_value;
     destination_account.deposit(value);
 }
+
+int CheckingAccount::get_number() const{
+    return m_number;
+}

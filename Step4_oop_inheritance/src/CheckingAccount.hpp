@@ -10,6 +10,7 @@ public:
     float get_interest_rate() const override;
     short int get_account_type() const override;
     void transfer(float value, Account &account);
+    int get_number() const;
 
 private:
     float m_interest_rate = 0.01;
