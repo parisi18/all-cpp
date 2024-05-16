@@ -1,14 +1,8 @@
 #include "Person.hpp"
 
-Person::Person(Cpf cpf, std::string name) : m_cpf(cpf), m_name(name)
-{
-    std::cout << "Person created!" << std::endl;
-}
+Person::Person(Cpf cpf, std::string name) : m_cpf(cpf), m_name(name){}
 
-Person::~Person()
-{
-    std::cout << "Person destroyed!" << std::endl;
-}
+Person::~Person(){}
 
 void Person::verifyHolderName(std::string holder_name){
     if(holder_name.size() < 5){
