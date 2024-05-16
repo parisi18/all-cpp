@@ -1,10 +1,5 @@
 #include "Holder.hpp"
 
-Holder::Holder(Cpf cpf, std::string name) : Person(cpf, name){}
+Holder::Holder(Cpf cpf, std::string name, std::string password) : Person(cpf, name), Auth(password){}
 
 Holder::~Holder(){}
-
-std::string Holder::get_name() const
-{
-    return m_name;
-}

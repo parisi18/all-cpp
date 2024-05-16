@@ -4,11 +4,11 @@
 #include <iostream>
 #include "Person.hpp"
 #include "Cpf.hpp"
+#include "Auth.hpp"
 
-class Holder : public Person
+class Holder : public Person, Auth
 {
 public:
-    Holder(Cpf cpf, std::string name);
+    Holder(Cpf cpf, std::string name, std::string password);
     ~Holder();
-    std::string get_name() const;
 };
