@@ -90,9 +90,7 @@ void Atm::init_atm(){
 
                 if(login_response.first == Login::Response::SUCCESS)
                     m_logged_account = login_response.second;
-                else if(login_response.first == Login::Response::INVALID_PASSWORD)
-                    break;
-                else if(login_response.first == Login::Response::INVALID_ACCOUNT)
+                else if(login_response.first == Login::Response::INVALID_PASSWORD || login_response.first == Login::Response::INVALID_ACCOUNT)
                     break;
                 else
                     break;
