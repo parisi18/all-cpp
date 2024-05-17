@@ -1,9 +1,6 @@
 #include "CheckingAccount.hpp"
 
-CheckingAccount::CheckingAccount(int number, Holder holder) : Account(number, holder)
-{
-    std::cout << "CheckingAccount created!" << std::endl;
-}
+CheckingAccount::CheckingAccount(int number, Holder holder) : Account(number, holder){}
 
 CheckingAccount::~CheckingAccount(){}
 

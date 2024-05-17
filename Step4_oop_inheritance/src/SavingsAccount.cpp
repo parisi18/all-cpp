@@ -1,9 +1,8 @@
 #include "SavingsAccount.hpp"
 
-SavingsAccount::SavingsAccount(int number, Holder holder) : Account(number, holder)
-{
-    std::cout << "SavingAccount created!" << std::endl;
-}
+SavingsAccount::SavingsAccount(int number, Holder holder) : Account(number, holder){}
+
+SavingsAccount::~SavingsAccount(){}
 
 float SavingsAccount::get_interest_rate() const{
     return m_interest_rate;

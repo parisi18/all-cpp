@@ -9,6 +9,7 @@ class SavingsAccount final : public Account
 {
 public:
     SavingsAccount(int number, Holder holder);
+    ~SavingsAccount();
     float get_interest_rate() const override; 
     short int get_account_type() const override;
     int get_number() const;
