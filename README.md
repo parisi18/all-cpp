@@ -148,6 +148,47 @@ We talked about `object composition`, a bit about performance, which is a subjec
 
 ![image](https://github.com/parisi18/all-cpp/assets/66031419/77acba12-2d45-46e4-ba82-b11de9939ce5)
 
+</details>
 
+
+<details>
+<summary>C++ Journey 4/7 ✔️</summary>
+
+Use a Simulação de ATM! 🇧🇷 // Use the Fake ATM! 🇺🇸 ▶️
+```
+g++ Step4_oop_inheritance/src/*.cpp -o Step4_oop_inheritance/src/bank.o && ./Step4_oop_inheritance/src/bank.o
+```
+
+⚠️ Adicionei por conta própria os `namespaces`: `AccountType`, `AtmOption` e `Login`, para facilitar na compreensão de algumas decisões. Além disso, os ensinamentos do curso foram adaptados ao meu exemplo! 🇧🇷
+
+⚠️ I added the `namespaces`: `AccountType`, `AtmOption`, and `Login` on my own, to facilitate the understanding of some decisions. Furthermore, the teachings of the course were adapted to my example! 🇺🇸
+  
+<details>
+<summary>OBJECT-ORIENTED PROGRAMMING WITH C++: WORKING WITH INHERITANCE 🇧🇷</summary>  
+Parabéns por terem chegado ao final desse treinamento de Programação Orientada Objeto com C++.
+
+Aprendemos sobre a tal `herança`. Então nós temos aqui, por exemplo, uma `ContaPopanca` que herda de `Conta`. Então nós entendemos o que é herança, para que serve, etc.
+
+E é claro, aprendemos a sintaxe, esse `:public`, e o `nome da classe que queremos herdar`. Falamos sobre `métodos virtuais`, `override`, `classes finais`, `Polimorfismo`, então, fechamos os `quatro pilares da orientação objetos`. Falamos sobre `herança múltipla`, implementamos herança múltipla. Por exemplo, em titular, em que é uma pessoa e é algo autenticavel também. Falamos sobre como `gerenciar recursos através de herança múltipla`. No final das contas entendemos o real propósito do Polimorfismo, onde a gente pode ter alguém que seja autenticavel; seja cliente, seja gerente, independente de qualquer coisa, isso vai funcionar. Uma conta, sendo corrente ou poupança, vai funcionar. Vimos algumas `boas práticas de programação` durante o desenvolvimento, principalmente da conta. Foi aqui que começamos a entender a ideia de `métodos puramente virtuais`, `classes abstratas`.
 
 </details>
+
+<details>
+<summary>ORIENTAÇÃO A OBJETOS COM C++: TRABALHANDO COM HERANÇA 🇺🇸</summary>  
+Congratulations on completing this Object-Oriented Programming with C++ training.
+
+We learned about `inheritance`. For example, we have a `SavingsAccount` that inherits from `Account`. We understood what inheritance is, what it is for, etc.
+
+And of course, we learned the syntax, the `:public`, and the `name of the class we want to inherit from`. We talked about `virtual methods`, `override`, `final classes`, `Polymorphism`, thus covering the `four pillars of object orientation`. We talked about `multiple inheritance`, implemented multiple inheritance. For example, in the account holder, where it is a person and is also something authenticable. We talked about how to `manage resources through multiple inheritance`. In the end, we understood the real purpose of Polymorphism, where we can have someone who is authenticable; be it a client, a manager, regardless of anything, it will work. An account, being a checking or savings account, will work. We saw some `good programming practices` during development, especially of the account. It was here that we began to understand the idea of `pure virtual methods`, `abstract classes`.
+
+</details>
+
+![image](https://github.com/parisi18/all-cpp/assets/66031419/917f6a5a-07d5-4020-a595-a9034bd4a2c5)
+
+![image](https://github.com/parisi18/all-cpp/assets/66031419/8da01464-6386-41a6-b870-8f0af8af3a26)
+
+</details>
+
+
+
+
