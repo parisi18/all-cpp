@@ -1,6 +1,7 @@
 #include "Cashier.hpp"
 
-Cashier::Cashier(Cpf cpf, std::string name, float salary) : Worker(cpf, name, salary){}
+Cashier::Cashier(Cpf cpf, std::string name, float salary, Day payday, std::string password) 
+    : Worker(cpf, name, salary, payday), Auth(password){}
 
 Cashier::~Cashier(){}
 
