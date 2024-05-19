@@ -11,6 +11,7 @@ public:
     short int get_account_type() const override;
     void transfer(float value, Account &account);
     int get_number() const;
+    void operator+=(Account &account); // Transfer half of the balance to this account
 
 private:
     float m_interest_rate = 0.01;

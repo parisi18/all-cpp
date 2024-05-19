@@ -34,6 +34,10 @@ void CheckingAccount::transfer(float value, Account& destination_account){
     destination_account.deposit(value);
 }
 
+void CheckingAccount::operator+=(Account& account){
+    transfer(account.getBalance() / 2, *this);
+}
+
 int CheckingAccount::get_number() const{
     return m_number;
 }
