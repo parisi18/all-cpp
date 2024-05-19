@@ -16,7 +16,8 @@ namespace AtmOption{
         TRANSFER = 4,
         SHOW_BALANCE = 5,
         LOGOUT = 6,
-        EXIT = 7
+        MANAGER_LOGIN = 7,
+        EXIT = 8
     };
 }
 
@@ -28,3 +29,13 @@ namespace Login{
         UNKNOWN_ERROR = 3
     };
 }
+
+enum Day{
+    SUNDAY = 0,
+    MONDAY = 1,
+    TUESDAY = 2,
+    WEDNESDAY = 3,
+    THURSDAY = 4,
+    FRIDAY = 5,
+    SATURDAY = 6
+};
