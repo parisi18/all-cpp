@@ -17,6 +17,7 @@ public:
     int get_number() const;
     static int get_total_accounts();
     Holder get_holder() const;
+    void operator+=(float value);
 
 public:
     // 1 - Checking Account
