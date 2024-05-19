@@ -16,8 +16,7 @@ namespace AtmOption{
         TRANSFER = 4,
         SHOW_BALANCE = 5,
         LOGOUT = 6,
-        MANAGER_LOGIN = 7,
-        EXIT = 8
+        EXIT = 7
     };
 }
 
