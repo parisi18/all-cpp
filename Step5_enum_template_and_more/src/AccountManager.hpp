@@ -27,6 +27,7 @@ public:
     Account* create_account();
     Account* get_account(int account_index);
     std::pair<Login::Response, Account*> login(int account_index, std::string password);
+    void manager_login();
     Account* selectAccountType(int account_ty, Holder& holder, std::vector<Account*>& m_accounts);
 
 private:

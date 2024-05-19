@@ -13,7 +13,8 @@ void Atm::show_menu(){
     std::cout << "Choose an option: " << std::endl;
     std::cout << "0 - Create account" << std::endl;
     std::cout << "1 - Login to account" << std::endl;
-    std::cout << "7 - Exit" << std::endl;
+    std::cout << "7 - Manager login" << std::endl;
+    std::cout << "8 - Exit" << std::endl;
     std::cout << "Option: ";
 }
 
@@ -28,7 +29,7 @@ void Atm::show_logged_menu(){
 
     std::cout << "5 - Show balance" << std::endl;
     std::cout << "6 - Logout" << std::endl;
-    std::cout << "7 - Exit" << std::endl;
+    std::cout << "8 - Exit" << std::endl;
     std::cout << "Option: ";
 }
 
@@ -45,7 +46,8 @@ void Atm::init_atm(){
     int amount, destination_account;
     Account *new_account;
     std::pair<Login::Response, Account*> login_response;
-
+    std::string password;
+    
     do{
         if(m_logged_account){
             std::cout << std::endl;
@@ -125,6 +127,9 @@ void Atm::init_atm(){
             break;
         case AtmOption::Option::LOGOUT:
             m_logged_account = nullptr;
+            break;
+        case AtmOption::Option::MANAGER_LOGIN:
+            m_account_manager->manager_login();
             break;
         case AtmOption::Option::EXIT:
             std::cout << "Exiting..." << std::endl;

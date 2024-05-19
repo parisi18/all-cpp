@@ -167,3 +167,10 @@ void AccountManager::transfer(int account_index, int account_index_dest){
     std::cout << "Transfer completed." << std::endl;
     std::cout << std::endl;
 }
+
+void AccountManager::manager_login(){
+    std::cout << "Manager CPF: " << std::endl;
+    std::string cpf;
+    std::cin >> cpf;
+    
+}
