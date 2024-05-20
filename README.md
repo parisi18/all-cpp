@@ -162,19 +162,9 @@ g++ Step4_oop_inheritance/src/*.cpp -o Step4_oop_inheritance/src/bank.o && ./Ste
 ⚠️ Adicionei por conta própria os `namespaces`: `AccountType`, `AtmOption` e `Login`, para facilitar na compreensão de algumas decisões. Além disso, os ensinamentos do curso foram adaptados ao meu exemplo! 🇧🇷
 
 ⚠️ I added the `namespaces`: `AccountType`, `AtmOption`, and `Login` on my own, to facilitate the understanding of some decisions. Furthermore, the teachings of the course were adapted to my example! 🇺🇸
-  
-<details>
-<summary>OBJECT-ORIENTED PROGRAMMING WITH C++: WORKING WITH INHERITANCE 🇧🇷</summary>  
-Parabéns por terem chegado ao final desse treinamento de Programação Orientada Objeto com C++.
-
-Aprendemos sobre a tal `herança`. Então nós temos aqui, por exemplo, uma `ContaPopanca` que herda de `Conta`. Então nós entendemos o que é herança, para que serve, etc.
-
-E é claro, aprendemos a sintaxe, esse `:public`, e o `nome da classe que queremos herdar`. Falamos sobre `métodos virtuais`, `override`, `classes finais`, `Polimorfismo`, então, fechamos os `quatro pilares da orientação objetos`. Falamos sobre `herança múltipla`, implementamos herança múltipla. Por exemplo, em titular, em que é uma pessoa e é algo autenticavel também. Falamos sobre como `gerenciar recursos através de herança múltipla`. No final das contas entendemos o real propósito do Polimorfismo, onde a gente pode ter alguém que seja autenticavel; seja cliente, seja gerente, independente de qualquer coisa, isso vai funcionar. Uma conta, sendo corrente ou poupança, vai funcionar. Vimos algumas `boas práticas de programação` durante o desenvolvimento, principalmente da conta. Foi aqui que começamos a entender a ideia de `métodos puramente virtuais`, `classes abstratas`.
-
-</details>
 
 <details>
-<summary>ORIENTAÇÃO A OBJETOS COM C++: TRABALHANDO COM HERANÇA 🇺🇸</summary>  
+<summary>ORIENTAÇÃO A OBJETOS COM C++: TRABALHANDO COM HERANÇA 🇧🇷 </summary>  
 Congratulations on completing this Object-Oriented Programming with C++ training.
 
 We learned about `inheritance`. For example, we have a `SavingsAccount` that inherits from `Account`. We understood what inheritance is, what it is for, etc.
@@ -183,11 +173,75 @@ And of course, we learned the syntax, the `:public`, and the `name of the class 
 
 </details>
 
+<details>
+<summary>OBJECT-ORIENTED PROGRAMMING WITH C++: WORKING WITH INHERITANCE  🇺🇸</summary>  
+Parabéns por terem chegado ao final desse treinamento de Programação Orientada Objeto com C++.
+
+Aprendemos sobre a tal `herança`. Então nós temos aqui, por exemplo, uma `ContaPopanca` que herda de `Conta`. Então nós entendemos o que é herança, para que serve, etc.
+
+E é claro, aprendemos a sintaxe, esse `:public`, e o `nome da classe que queremos herdar`. Falamos sobre `métodos virtuais`, `override`, `classes finais`, `Polimorfismo`, então, fechamos os `quatro pilares da orientação objetos`. Falamos sobre `herança múltipla`, implementamos herança múltipla. Por exemplo, em titular, em que é uma pessoa e é algo autenticavel também. Falamos sobre como `gerenciar recursos através de herança múltipla`. No final das contas entendemos o real propósito do Polimorfismo, onde a gente pode ter alguém que seja autenticavel; seja cliente, seja gerente, independente de qualquer coisa, isso vai funcionar. Uma conta, sendo corrente ou poupança, vai funcionar. Vimos algumas `boas práticas de programação` durante o desenvolvimento, principalmente da conta. Foi aqui que começamos a entender a ideia de `métodos puramente virtuais`, `classes abstratas`.
+
+</details>
+
+
 ![image](https://github.com/parisi18/all-cpp/assets/66031419/917f6a5a-07d5-4020-a595-a9034bd4a2c5)
 
 ![image](https://github.com/parisi18/all-cpp/assets/66031419/8da01464-6386-41a6-b870-8f0af8af3a26)
 
 </details>
+
+<details>
+<summary>C++ Journey 5/7 ✔️</summary>
+
+Use a Simulação de ATM! 🇧🇷 // Use the Fake ATM! 🇺🇸 ▶️
+```
+g++ Step5_enum_template_and_more/src/*.cpp -o Step5_enum_template_and_more/src/atm.o && ./Step5_enum_template_and_more/src/atm.o
+```
+
+<details>
+<summary>AVANÇANDO COM C++: ENUM, TEMPLATES E MAIS RECURSOS 🇧🇷</summary>  
+  
+Parabéns por chegar ao final deste treinamento, onde avançamos um pouco os nossos conhecimentos de C++! 
+
+Nós começamos esse treinamento com a necessidade de representarmos o dia da semana de pagamento de um funcionário. Nós vimos algumas opções e conhecemos `enum`, `enum class`, falamos sobre escopo, etc.
+
+Depois fomos adicionar algumas funcionalidades aqui na conta. Então permitimos que, por exemplo, utilizando um `operador de soma com atribuição` nós pudéssemos `depositar valores` nessa conta.
+
+Com isso, nós aprendemos sobre a `sobrecarga de operadores`. Enquanto fazíamos isso, nós conhecemos também o conceito de `friend functions` e através desse avanço de conhecimento, nós conhecemos alguns tipos diferentes, como `variant`, `any`, `optional` e `pair`. Então aprendemos como lidar com alguns `tipos mais complexos do C++`.
+
+Falando desses tipos mais complexos, nós entendemos essa sintaxe interessante aqui, que são `templates`. Nós aprendemos a criar uma `template function`, uma `template class`. Vimos como ter tipos como parâmetros e até valores na hora de pedirmos para o compilador gerar código para nós.
+
+No final, vimos que isso pode acabar sendo um tiro no pé, pode ser um problema. Por exemplo: ao tornar a conta um template, eu precisaria fazer com que todas essas funções que recebem uma conta também fossem um template, então teríamos um grande problema. No nosso caso, vimos que não vale a pena, mas nós aprendemos a utilizar, nós vimos como utilizar.
+
+Não só templates, mas C++ como uma linguagem em si, ainda tem muito mais coisa para estudarmos, tem muito mais coisa para aprendermos; mas eu espero que você tenha tirado um bom proveito desse treinamento.
+
+</details>
+
+<details>
+<summary>MOVING FORWARD WITH C++: ENUM, TEMPLATES AND MORE RESOURCES 🇺🇸</summary>  
+
+Congratulations on completing this training, where we advanced our C++ knowledge a bit! 
+
+We started this training with the need to represent the payday of an employee. We saw some options and learned about `enum`, `enum class`, talked about scope, etc.
+
+Then we added some functionalities to the account. So, for example, by using a `plus-equals operator`, we could `deposit values` into this account.
+
+With that, we learned about `operator overloading`. While doing this, we also learned about the concept of `friend functions` and through this advancement of knowledge, we learned about some different types, such as `variant`, `any`, `optional`, and `pair`. So, we learned how to handle some `more complex C++ types`.
+
+Speaking of these more complex types, we understood this interesting syntax here, which are `templates`. We learned to create a `template function`, a `template class`. We saw how to have types as parameters and even values when asking the compiler to generate code for us.
+
+In the end, we saw that this can end up leading to complications. For example: by making the account a template, I would need to make all these functions that receive an account also templates, so we would have a big problem. In our case, we saw that it is not worth it, but we learned how to use it, we saw how to use it.
+
+Not only templates, but C++ as a language itself, still has a lot more to study, a lot more to learn; but I hope you have taken good advantage of this training.
+
+</details>
+
+![image](https://github.com/parisi18/all-cpp/assets/66031419/b89d3b86-2c02-424f-a70a-7a2255fb3098)
+
+![image](https://github.com/parisi18/all-cpp/assets/66031419/1b453964-8a41-460e-a658-6f24036a3757)
+
+</details>
+
 
 
 
