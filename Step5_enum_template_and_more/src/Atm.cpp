@@ -140,3 +140,10 @@ void Atm::init_atm(){
         }
     } while (option != AtmOption::Option::EXIT);
 }
+
+std::ostream& operator<<(std::ostream& out, const Account& account){
+    Person holder = account.m_holder;
+    std::cout << "Account balance: " << account.m_balance << std::endl;
+    std::cout << "Account holder: " << holder.get_name() << std::endl;
+    return out;
+}
