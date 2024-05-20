@@ -42,6 +42,10 @@ void Account::operator+=(float value){
     deposit(value);
 }
 
+bool Account::operator<(Account& account){
+    return m_balance < account.getBalance();
+}
+
 float Account::getBalance() const{
     return m_balance;
 }

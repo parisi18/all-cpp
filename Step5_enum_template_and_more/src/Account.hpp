@@ -26,6 +26,7 @@ public:
     static int get_total_accounts();
     Holder get_holder() const;
     void operator+=(float value);
+    bool operator<(Account& account);
     friend std::ostream& operator<<(std::ostream& out, const Account& account);
 
 public:
