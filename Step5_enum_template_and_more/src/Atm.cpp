@@ -147,3 +147,9 @@ std::ostream& operator<<(std::ostream& out, const Account& account){
     std::cout << "Account holder: " << holder.get_name() << std::endl;
     return out;
 }
+
+// Function template to return the minor value between two values
+template<typename T>
+T minor(T a, T b){
+    return a < b ? a : b;
+}
