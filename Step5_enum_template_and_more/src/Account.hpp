@@ -7,11 +7,18 @@
 class Account
 {
 public:
+
+    enum WithdrawReturn{
+        SUCCESS,
+        NEGATIVE_VALUE,
+        INSUFICIENT_FUNDS
+    };
+
     Account(int number, Holder holder);
     virtual ~Account();
     virtual float get_interest_rate() const = 0; // Pure virtual function
     virtual short int get_account_type() const = 0; // Pure virtual function
-    bool withdraw(float value);
+    WithdrawReturn withdraw(float value);
     bool deposit(float value);
     float getBalance() const;
     int get_number() const;

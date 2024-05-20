@@ -11,24 +11,20 @@ Account::~Account(){
     total_accounts--;
 }
 
-bool Account::withdraw(float value){
+Account::WithdrawReturn Account::withdraw(float value){
     
-    if(value < 0){
-        std::cout << "Invalid value" << std::endl;
-        return false;
-    }
+    if(value < 0)
+        return WithdrawReturn::NEGATIVE_VALUE;
 
     float tax = value * get_interest_rate();
     float total_value = value + tax;
 
-    if(total_value > m_balance){
-        std::cout << "Insufficient funds" << std::endl;
-        return false;
-    }
+    if(total_value > m_balance)
+        return WithdrawReturn::INSUFICIENT_FUNDS;
     
     m_balance -= total_value;
 
-    return true;
+    return WithdrawReturn::SUCCESS;
 }
 
 bool Account::deposit(float value){
