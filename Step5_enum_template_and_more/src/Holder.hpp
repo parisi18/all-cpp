@@ -6,10 +6,9 @@
 #include "Cpf.hpp"
 #include "Auth.hpp"
 
-class Holder : public Person, Auth
+class Holder : public Person<Cpf>, Auth
 {
 public:
     Holder(Cpf cpf, std::string name, std::string password);
-    ~Holder();
     bool authenticate(std::string password) const override;
 };

@@ -5,11 +5,10 @@
 #include <string>
 #include "utils.hpp"
 
-class Worker : public Person
+class Worker : public Person<Cpf>
 {
 public:
     Worker(Cpf cpf, std::string name, float salary, Day payday);
-    ~Worker();
     float get_salary() const;
     virtual float compensation() const = 0;
 private:
