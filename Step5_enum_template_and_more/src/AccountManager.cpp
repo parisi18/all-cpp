@@ -82,25 +82,19 @@ void AccountManager::withdraw(int account_index, int amount){
 
     auto balance = std::get_if<float>(&withdraw_return);
 
-    if (std::holds_alternative<Account::WithdrawReturn>(withdraw_return)) {
-        auto result = std::get<Account::WithdrawReturn>(withdraw_return);
-
-        if (result == Account::WithdrawReturn::INSUFICIENT_FUNDS) {
-            std::cout << "Withdraw failed: Insufficient funds." << std::endl;
-            std::cout << std::endl;
-            return;
-        }
-
-        if (result == Account::WithdrawReturn::NEGATIVE_VALUE) {
-            std::cout << "Withdraw failed: Negative value." << std::endl;
-            std::cout << std::endl;
-            return;
-        }
-    } else if (std::holds_alternative<float>(withdraw_return)) {
-        auto balance = std::get<float>(withdraw_return);
+    if(auto balance = std::get_if<float>(&withdraw_return)){
         std::cout << "Withdraw completed." << std::endl;
-        std::cout << "New balance: " << balance << std::endl;
+        std::cout << "New balance: " << *balance << std::endl;
         std::cout << std::endl;
+        return;
+    }else if(std::get<Account::WithdrawReturn>(withdraw_return) == Account::WithdrawReturn::INSUFICIENT_FUNDS){
+        std::cout << "Withdraw failed: Insufficient funds." << std::endl;
+        std::cout << std::endl;
+        return;
+    }else if(std::get<Account::WithdrawReturn>(withdraw_return) == Account::WithdrawReturn::NEGATIVE_VALUE){
+        std::cout << "Withdraw failed: Negative value." << std::endl;
+        std::cout << std::endl;
+        return;
     }
 
     return;
