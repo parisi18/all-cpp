@@ -11,7 +11,7 @@ Account::~Account(){
     total_accounts--;
 }
 
-Account::WithdrawReturn Account::withdraw(float value){
+std::variant<Account::WithdrawReturn, float> Account::withdraw(float value){
     
     if(value < 0)
         return WithdrawReturn::NEGATIVE_VALUE;
@@ -24,7 +24,7 @@ Account::WithdrawReturn Account::withdraw(float value){
     
     m_balance -= total_value;
 
-    return WithdrawReturn::SUCCESS;
+    return m_balance;
 }
 
 bool Account::deposit(float value){

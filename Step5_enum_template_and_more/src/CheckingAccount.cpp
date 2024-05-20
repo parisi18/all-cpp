@@ -16,18 +16,17 @@ short int CheckingAccount::get_account_type() const
 
 void CheckingAccount::transfer(float value, Account& destination_account){
 
-    Account::WithdrawReturn withdraw_return = Account::withdraw(value);
+    auto withdraw_return = Account::withdraw(value);
 
-    if(withdraw_return == Account::WithdrawReturn::SUCCESS){
+    if(auto balance = std::get_if<float>(&withdraw_return)){
         destination_account.deposit(value);
         std::cout << "Transfer successful" << std::endl;
+        std::cout << "New balance: " << balance << std::endl;
     }
-    else if(withdraw_return == Account::WithdrawReturn::INSUFICIENT_FUNDS){
+    else if(std::get<Account::WithdrawReturn>(withdraw_return) == Account::WithdrawReturn::INSUFICIENT_FUNDS)
         std::cout << "Transfer failed: Insufficient funds" << std::endl;
-    }
-    else if(withdraw_return == Account::WithdrawReturn::NEGATIVE_VALUE){
+    else if(std::get<Account::WithdrawReturn>(withdraw_return) == Account::WithdrawReturn::NEGATIVE_VALUE)
         std::cout << "Transfer failed: Negative value" << std::endl;
-    }
 
     return;
 }

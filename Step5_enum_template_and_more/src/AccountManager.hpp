@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <variant>
 
 #include "Cpf.hpp"
 #include "Holder.hpp"

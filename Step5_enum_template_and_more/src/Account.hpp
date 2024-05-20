@@ -3,6 +3,7 @@
 #include <string>
 #include <iostream>
 #include "Holder.hpp"
+#include <variant>
 
 class Account
 {
@@ -18,7 +19,7 @@ public:
     virtual ~Account();
     virtual float get_interest_rate() const = 0; // Pure virtual function
     virtual short int get_account_type() const = 0; // Pure virtual function
-    WithdrawReturn withdraw(float value);
+    std::variant<WithdrawReturn, float> withdraw(float value);
     bool deposit(float value);
     float getBalance() const;
     int get_number() const;

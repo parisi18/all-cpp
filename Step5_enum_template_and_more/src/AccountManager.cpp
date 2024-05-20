@@ -77,7 +77,33 @@ void AccountManager::deposit(int account_index, int amount){
 
 void AccountManager::withdraw(int account_index, int amount){
     Account* account = get_account(account_index);
-    account->withdraw(amount);
+
+    std::variant<Account::WithdrawReturn, float> withdraw_return = account->withdraw(amount);
+
+    auto balance = std::get_if<float>(&withdraw_return);
+
+    if (std::holds_alternative<Account::WithdrawReturn>(withdraw_return)) {
+        auto result = std::get<Account::WithdrawReturn>(withdraw_return);
+
+        if (result == Account::WithdrawReturn::INSUFICIENT_FUNDS) {
+            std::cout << "Withdraw failed: Insufficient funds." << std::endl;
+            std::cout << std::endl;
+            return;
+        }
+
+        if (result == Account::WithdrawReturn::NEGATIVE_VALUE) {
+            std::cout << "Withdraw failed: Negative value." << std::endl;
+            std::cout << std::endl;
+            return;
+        }
+    } else if (std::holds_alternative<float>(withdraw_return)) {
+        auto balance = std::get<float>(withdraw_return);
+        std::cout << "Withdraw completed." << std::endl;
+        std::cout << "New balance: " << balance << std::endl;
+        std::cout << std::endl;
+    }
+
+    return;
 }
 
 float AccountManager::get_balance(int account_index){
@@ -101,13 +127,13 @@ std::pair<Login::Response, Account*> AccountManager::login(int account_index, st
             throw Login::Response::INVALID_PASSWORD;
         }
         
-        return {Login::Response::SUCCESS, account};
+        return std::make_pair(Login::Response::SUCCESS, account);
 
     } catch(Login::Response& response) {
         return {response, nullptr};
     } catch(...) {
         std::cout << "An unknown error occurred." << std::endl;
-        return {Login::Response::UNKNOWN_ERROR, nullptr};
+        return std::make_pair(Login::Response::UNKNOWN_ERROR, nullptr);
     }
 }
 
@@ -152,7 +178,10 @@ void AccountManager::transfer(int account_index, int account_index_dest){
     int amount;
     std::cin >> amount;
 
-    if(!account->withdraw(amount)){
+    auto withdraw_return = account->withdraw(amount);
+    auto balance = std::get_if<float>(&withdraw_return);
+
+    if(!balance){
         std::cout << "Transfer failed." << std::endl;
         std::cout << std::endl;
         return;
