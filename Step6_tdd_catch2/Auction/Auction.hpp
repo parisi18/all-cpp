@@ -12,8 +12,8 @@ public:
     void receiveBid(const Bid& bid);
 
 private:
-    std::vector<Bid> bids;
-    std::string description;
+    std::vector<Bid> m_bids;
+    std::string m_description;
 };
 
 #endif

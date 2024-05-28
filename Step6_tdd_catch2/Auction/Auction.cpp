@@ -1,14 +1,13 @@
 #include "Auction.hpp"
 
-Auction::Auction(std::string description) : description(description) {}
+Auction::Auction(std::string description) : m_description(description) {}
 
 const std::vector<Bid>& Auction::getBids() const
 {
-    return bids;
+    return m_bids;
 }
 
 void Auction::receiveBid(const Bid& bid)
 {
-    bids.push_back(bid);
+    m_bids.push_back(bid);
 }
-

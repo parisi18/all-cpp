@@ -8,8 +8,8 @@ public:
     Bid(User user, int amount);
     float getAmount() const;    
 private:
-    User user;
-    float amount;
+    User m_user;
+    float m_amount;
 };
 
 #endif

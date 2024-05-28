@@ -1,8 +1,8 @@
 #include "User.hpp"
 
-User::User(std::string name) : name(name) {}
+User::User(std::string name) : m_name(name) {}
 
 std::string User::getName() const
 {
-    return name;
+    return m_name;
 }
