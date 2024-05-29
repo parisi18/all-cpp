@@ -2,7 +2,7 @@
 
 Bid::Bid(User user, int amount) : m_user(user), m_amount(amount) {}
 
-float Bid::getAmount() const
+float Bid::get_amount() const
 {
     return m_amount;
 }

@@ -1,14 +1,12 @@
-#ifndef User_hpp
-#define User_hpp
+#pragma once
+
 #include <string>
 
 class User
 {
 public:
     User(std::string name);
-    std::string getName() const;
+    std::string get_name() const;
 private:
     std::string m_name;
 };
-
-#endif
