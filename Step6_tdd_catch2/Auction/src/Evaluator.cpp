@@ -9,7 +9,9 @@ void Evaluator::evaluate(Auction auction)
     for(Bid bid : bids){
         if(bid.get_amount() > m_highest_bid){
             m_highest_bid = bid.get_amount();
-        }else if(bid.get_amount() < m_lowest_bid){
+        }
+        
+        if(bid.get_amount() < m_lowest_bid){
             m_lowest_bid = bid.get_amount();
         }
     }
