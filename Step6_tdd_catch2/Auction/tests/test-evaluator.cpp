@@ -51,7 +51,7 @@ TEST_CASE("Should return the lowest descending order bids"){
     REQUIRE(1000 == evaluator.get_lowest_value());
 }
 
-TEST_CASE("Should return the lowest asending order bids"){
+TEST_CASE("Should return the lowest ascending order bids"){
     //Arrange - Given
     Bid bid2(User("Lud Chagas"), 1000);
     Bid bid1(User("Rafael Parisi"), 2000);
