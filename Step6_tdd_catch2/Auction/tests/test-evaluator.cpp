@@ -1,4 +1,3 @@
-#define CATCH_CONFIG_MAIN
 #include "catch.hpp"
 #include "Evaluator.hpp"
 #include <string>
@@ -74,22 +73,3 @@ TEST_CASE("Evaluator"){
         REQUIRE(1500 == top_3_bids[2].get_amount());
     }
 }
-
-TEST_CASE("Auction should not have two bids with the same user"){
-    //Arrange - Given
-    Auction auction("Playstation 5");
-
-    Bid bid1(User("Rafael Parisi"), 1000);
-    Bid bi2(User("Rafael Parisi"), 2000);
-
-    //Act - When
-    auction.receive_bid(bid1);
-    auction.receive_bid(bi2);
-
-    //Assert - Then
-    REQUIRE(1 == auction.get_bids().size());
-    REQUIRE(1000 == auction.get_bids()[0].get_amount());
-}
-
-
-
