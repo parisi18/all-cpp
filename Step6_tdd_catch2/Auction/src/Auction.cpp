@@ -8,6 +8,7 @@ const std::vector<Bid>& Auction::get_bids() const
 }
 
 void Auction::receive_bid(const Bid& bid)
-{
-    m_bids.push_back(bid);
-}
+{   
+    if(m_bids.empty() || m_bids.back().get_user_name() != bid.get_user_name())
+        m_bids.push_back(bid);
+}   
