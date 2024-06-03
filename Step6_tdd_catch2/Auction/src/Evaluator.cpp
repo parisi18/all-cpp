@@ -15,6 +15,10 @@ void Evaluator::evaluate(Auction auction)
             m_lowest_bid = bid.get_amount();
         }
     }
+
+    std::sort(bids.begin(), bids.end(), sort_bids);
+    size_t size = bids.size() > 3 ? 3 : bids.size();
+    m_top_3_bids = std::vector<Bid>(bids.begin(), bids.begin() + size);
 }
 
 float Evaluator::get_highest_value() const
@@ -25,4 +29,14 @@ float Evaluator::get_highest_value() const
 float Evaluator::get_lowest_value() const
 {
     return m_lowest_bid;
+}
+
+std::vector<Bid> Evaluator::get_top_3_bids() const
+{
+    return m_top_3_bids;
+}
+
+bool Evaluator::sort_bids(const Bid& bid1, const Bid& bid2)
+{
+    return bid1.get_amount() > bid2.get_amount();
 }
