@@ -9,6 +9,8 @@ void Evaluator::evaluate(Auction auction)
     for(Bid bid : bids){
         if(bid.get_amount() > m_highest_bid){
             m_highest_bid = bid.get_amount();
+        }else if(bid.get_amount() < m_lowest_bid){
+            m_lowest_bid = bid.get_amount();
         }
     }
 }
@@ -16,4 +18,9 @@ void Evaluator::evaluate(Auction auction)
 float Evaluator::get_highest_value() const
 {
     return m_highest_bid;
+}
+
+float Evaluator::get_lowest_value() const
+{
+    return m_lowest_bid;
 }
