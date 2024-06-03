@@ -3,10 +3,12 @@
 #include "Auction.hpp"
 #include <limits.h>
 #include <algorithm>
+#include <iostream>
 
 class Evaluator
 {
 public:
+    Evaluator();
     void evaluate(Auction auction);
     float get_highest_value() const;
     float get_lowest_value() const;

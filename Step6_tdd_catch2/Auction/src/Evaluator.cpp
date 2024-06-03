@@ -1,5 +1,12 @@
 #include "Evaluator.hpp"
 
+Evaluator::Evaluator(){
+    m_highest_bid = INT_MIN;
+    m_lowest_bid = INT_MAX;
+
+    //std::cout << "Constructor Evaluator" << std::endl;
+}
+
 void Evaluator::evaluate(Auction auction)
 {
     std::vector<Bid> bids = auction.get_bids();
