@@ -1,6 +1,7 @@
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
 #include "Evaluator.hpp"
+#include <string>
 
 Auction descending_order(){
     Bid bid2(User("Lud Chagas"), 2000);
@@ -89,5 +90,16 @@ TEST_CASE("Auction should not have two bids with the same user"){
     REQUIRE(1 == auction.get_bids().size());
     REQUIRE(1000 == auction.get_bids()[0].get_amount());
 }
+
+TEST_CASE("User should give first name"){
+    //Arrange - Given
+    User user("Rafael Parisi");
+
+    //Act - When
+    std::string first_name = user.get_first_name();
+
+    //Assert - Then
+    REQUIRE("Rafael" == first_name);
+}   
 
 
