@@ -252,7 +252,7 @@ Not only templates, but C++ as a language itself, still has a lot more to study,
 g++ -I Step6_tdd_catch2/Auction/include/ Step6_tdd_catch2/Auction/src/* Step6_tdd_catch2/Auction/tests/main-test.cpp Step6_tdd_catch2/Auction/tests/test-auction.cpp -o Step6_tdd_catch2/Auction/tests/test-auction.o && ./Step6_tdd_catch2/Auction/tests/test-auction.o -s
 ```
 
-## Testes do Avalaiador 🇧🇷 // Evaluator tests  🇺🇸:
+## Testes do Avaliador 🇧🇷 // Evaluator tests  🇺🇸:
 ```
 g++ -I Step6_tdd_catch2/Auction/include/ Step6_tdd_catch2/Auction/src/* Step6_tdd_catch2/Auction/tests/main-test.cpp Step6_tdd_catch2/Auction/tests/test-evaluator.cpp -o Step6_tdd_catch2/Auction/tests/test-evaluator.o && ./Step6_tdd_catch2/Auction/tests/test-evaluator.o -s
 ```
