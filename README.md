@@ -265,7 +265,7 @@ g++ -I Step6_tdd_catch2/Auction/include/ Step6_tdd_catch2/Auction/src/* Step6_td
 <details>
 <summary>C++ E TDD: TESTES DE UNIDADE COM CATCH2 🇧🇷</summary>  
   
-Pessoal, parabéns por terem chegado ao final desse treinamento tão importante, que é o de testes automatizados usando o C++!
+Parabéns por terem chegado ao final desse treinamento tão importante, que é o de testes automatizados usando o C++!
 
 Nesse treinamento nós aprendemos bastante coisas, mas eu quero focar nessa imagem que durante o treinamento em si nem olhamos, só vimos na introdução. Nós praticamos durante esse treinamento `testes de unidade`.
 
@@ -296,7 +296,7 @@ Vimos como `otimizarmos a compilação do nosso teste` separando em arquivos sep
 <details>
 <summary>C++ AND TDD: UNIT TESTS WITH CATCH2  🇺🇸</summary>  
 
-Guys, congratulations on reaching the end of this important training on automated testing using C++!
+Congratulations on reaching the end of this important training on automated testing using C++!
 
 In this training, we learned a lot, but I want to focus on this image that we didn't really look at during the training itself, only in the introduction. During this training, we practiced `unit tests`.
 
