@@ -1,14 +1,14 @@
-ESSA É A MINHA JORNADA C++ 🇧🇷 // THIS IS MY C++ JOURNEY! 🇺🇸
+# ESSA É A MINHA JORNADA C++ 🇧🇷 // THIS IS MY C++ JOURNEY! 🇺🇸
 
 <details>
 <summary>C++ Journey 1/7 ✔️</summary>
 
-Para rodar o jogo da advinhação 🇧🇷 // To run the guessing game! 🇺🇸 ▶️
+## Para rodar o jogo da advinhação 🇧🇷 // To run the guessing game! 🇺🇸 ▶️
 ```
 g++ Step1_knowing_the_language/guessingGame/guessingGame.cpp -o  Step1_knowing_the_language/guessingGame/guessingGame && ./Step1_knowing_the_language/guessingGame/guessingGame
 ```
 
-Para rodar o jogo da forca 🇧🇷 // To run the hangman game! 🇺🇸 ▶️
+## Para rodar o jogo da forca 🇧🇷 // To run the hangman game! 🇺🇸 ▶️
 ```
 make ./Step1_knowing_the_language/hangmanGame/hangman && ./Step1_knowing_the_language/hangmanGame/hangman
 ```
@@ -62,7 +62,7 @@ make ./Step1_knowing_the_language/hangmanGame/hangman && ./Step1_knowing_the_lan
 <details>
 <summary>C++ Journey 2/7 ✔️</summary>
 
-Para rodar o jogo da forca 🇧🇷 // To run the hangman game! 🇺🇸 ▶️
+## Para rodar o jogo da forca 🇧🇷 // To run the hangman game! 🇺🇸 ▶️
 ```
 g++ Step2_advancing_the_lang/hangmanGame/*.cpp -o hangman.out && ./hangman.out 
 ```
@@ -104,7 +104,7 @@ g++ Step2_advancing_the_lang/hangmanGame/*.cpp -o hangman.out && ./hangman.out
 <details>
 <summary>C++ Journey 3/7 ✔️</summary>
 
-Crie sua conta no banco! 🇧🇷 // Create your bank account! 🇺🇸 ▶️
+## Crie sua conta no banco! 🇧🇷 // Create your bank account! 🇺🇸 ▶️
 ```
 g++ Step3_oop/Bank/src/*.cpp -o Step3_oop/Bank/src/bank.o && ./Step3_oop/Bank/src/bank.o
 ```
@@ -154,7 +154,7 @@ We talked about `object composition`, a bit about performance, which is a subjec
 <details>
 <summary>C++ Journey 4/7 ✔️</summary>
 
-Use a Simulação de ATM! 🇧🇷 // Use the Fake ATM! 🇺🇸 ▶️
+## Use a Simulação de ATM! 🇧🇷 // Use the Fake ATM! 🇺🇸 ▶️
 ```
 g++ Step4_oop_inheritance/src/*.cpp -o Step4_oop_inheritance/src/bank.o && ./Step4_oop_inheritance/src/bank.o
 ```
@@ -193,7 +193,7 @@ E é claro, aprendemos a sintaxe, esse `:public`, e o `nome da classe que querem
 <details>
 <summary>C++ Journey 5/7 ✔️</summary>
 
-Use a Simulação de ATM! 🇧🇷 // Use the Fake ATM! 🇺🇸 ▶️
+## Use a Simulação de ATM! 🇧🇷 // Use the Fake ATM! 🇺🇸 ▶️
 ```
 g++ Step5_enum_template_and_more/src/*.cpp -o Step5_enum_template_and_more/src/atm.o && ./Step5_enum_template_and_more/src/atm.o
 ```
@@ -239,6 +239,96 @@ Not only templates, but C++ as a language itself, still has a lot more to study,
 ![image](https://github.com/parisi18/all-cpp/assets/66031419/b89d3b86-2c02-424f-a70a-7a2255fb3098)
 
 ![image](https://github.com/parisi18/all-cpp/assets/66031419/1b453964-8a41-460e-a658-6f24036a3757)
+
+</details>
+
+<details>
+<summary>C++ Journey 6/7 ✔️</summary>
+
+## Rode os testes com Catch2! 🇧🇷 // Run the tests using Catch2! 🇺🇸 ▶️
+
+## Testes do Leilão 🇧🇷 // Auction tests 🇺🇸:  
+```
+g++ -I Step6_tdd_catch2/Auction/include/ Step6_tdd_catch2/Auction/src/* Step6_tdd_catch2/Auction/tests/main-test.cpp Step6_tdd_catch2/Auction/tests/test-auction.cpp -o Step6_tdd_catch2/Auction/tests/test-auction.o && ./Step6_tdd_catch2/Auction/tests/test-auction.o -s
+```
+
+## Testes do Avalaiador 🇧🇷 // Evaluator tests  🇺🇸:
+```
+g++ -I Step6_tdd_catch2/Auction/include/ Step6_tdd_catch2/Auction/src/* Step6_tdd_catch2/Auction/tests/main-test.cpp Step6_tdd_catch2/Auction/tests/test-evaluator.cpp -o Step6_tdd_catch2/Auction/tests/test-evaluator.o && ./Step6_tdd_catch2/Auction/tests/test-evaluator.o -s
+```
+
+## Testes do Usuário 🇧🇷 // User tests  🇺🇸:
+```
+g++ -I Step6_tdd_catch2/Auction/include/ Step6_tdd_catch2/Auction/src/* Step6_tdd_catch2/Auction/tests/main-test.cpp Step6_tdd_catch2/Auction/tests/test-user.cpp -o Step6_tdd_catch2/Auction/tests/test-user.o && ./Step6_tdd_catch2/Auction/tests/test-user.o -s
+```
+
+<details>
+<summary>C++ E TDD: TESTES DE UNIDADE COM CATCH2 🇧🇷</summary>  
+  
+Pessoal, parabéns por terem chegado ao final desse treinamento tão importante, que é o de testes automatizados usando o C++!
+
+Nesse treinamento nós aprendemos bastante coisas, mas eu quero focar nessa imagem que durante o treinamento em si nem olhamos, só vimos na introdução. Nós praticamos durante esse treinamento `testes de unidade`.
+
+![image](https://github.com/parisi18/all-cpp/assets/66031419/00d5d57c-a14e-4928-a90e-d19642c3296b)
+
+
+O que significa um `teste de unidade`? É um teste que simplesmente `testa a menor unidade possível`. Por exemplo: o método para avaliar de um leilão, o método para recuperar primeiro nome de usuário, o método para receber lance de um leilão.
+
+Ou seja, a menor unidade possível. Ele `testa o mínimo` sem escrever em arquivo, sem acessar banco de dados, sem juntar várias classes; o mínimo possível. Existem técnicas para garantirmos que não misturemos classes durante testes de unidade, mas isso pode ficar para um assunto futuro. O ponto é: praticamos aqui os testes de unidade.
+
+E se você der uma olhada nesse exemplo aqui, nessa imagem, tem algumas coisas interessantes. Essa aqui é a famosa `pirâmide de testes`.
+Na pirâmide de testes nós temos na base `testes de unidade` porque eles `são muito rápidos` e são `simples de escrever`, como vimos aqui, e eles `geram bastante valor`. Para quem conhece o desenho do Papa-Léguas e Coiote, nós temos aqui embaixo porque é rápido, conseguimos executar muitos testes de unidade em um pequeno espaço de tempo.
+
+`Testes de integração` seriam testes onde batemos em um banco de dados, escrevemos em um arquivo, chamamos um API externo e chamamos um outro programa, ou alguma coisa do tipo. Ou seja, um teste onde nosso código se integra com outro.
+
+Ele é um pouco mais difícil de escrever, é `um pouco mais demorado` porque `depende de coisas externas` e é `mais propenso à falha`. Porque se o banco de dados estiver fora do ar ou se o arquivo não puder ser escrito, o teste vai falhar.
+
+Já um `teste end-to-end`, é o que é chamado de `teste ponta a ponta`. Se estamos criando uma aplicação desktop, por exemplo, um Word da vida, um teste end-to-end significa abrir essa aplicação pronta e testar, clicar nos botões, ver o que acontece. Ou seja, é um `teste na perspectiva do usuário`, de quem vai usar aquele programa. Além de ser `muito lento`, ele também é `muito propenso às falhas`. Se um botão mudar de lugar, o teste falha etc.
+
+Por isso essa pirâmide é assim, você deve ter muitos testes de unidade, ter alguns teste de integração e testes end-to-end e testes de ponta a ponta só para os mais importantes para o seu sistema. Seja seu jogo, sua aplicação desktop etc.
+
+Com isso, nós encerramos esse treinamento. De novo, vimos bastante coisas, falamos sobre testes em si e o que são. Falamos sobre a ferramenta `Catch2`, que é uma das inúmeras ferramentas de testes automatizados em C++. Falamos sobre como organizarmos nossos testes `generator`, `sections` e `test cases`.
+
+Vimos como `otimizarmos a compilação do nosso teste` separando em arquivos separados. Aprendemos sobre a `técnica de TDD`, que consiste em `criarmos o teste antes do código`. Praticamos bastante isso tudo.
+
+</details>
+
+<details>
+<summary>C++ AND TDD: UNIT TESTS WITH CATCH2  🇺🇸</summary>  
+
+Guys, congratulations on reaching the end of this important training on automated testing using C++!
+
+In this training, we learned a lot, but I want to focus on this image that we didn't really look at during the training itself, only in the introduction. During this training, we practiced `unit tests`.
+
+![image](https://github.com/parisi18/all-cpp/assets/66031419/00d5d57c-a14e-4928-a90e-d19642c3296b)
+
+What does a `unit test` mean? It is a test that simply `tests the smallest possible unit`. For example: the method to evaluate an auction, the method to retrieve the first name of a user, the method to place a bid in an auction.
+
+In other words, the smallest possible unit. It `tests the minimum` without writing to a file, without accessing a database, without combining multiple classes; the minimum possible. There are techniques to ensure that we do not mix classes during unit tests, but that can be a topic for the future. The point is: we practiced unit tests here.
+
+And if you take a look at this example here, in this image, there are some interesting things. This here is the famous `testing pyramid`. 
+
+In the testing pyramid, we have `unit tests` at the base because they are `very fast` and are `simple to write`, as we saw here, and they `generate a lot of value`. For those who know the Road Runner and Coyote cartoon, we have them at the bottom because it’s fast; we can run many unit tests in a short period of time.
+
+`Integration tests` are tests where we hit a database, write to a file, call an external API, or call another program, or something like that. In other words, a test where our code integrates with another.
+
+It is a bit more difficult to write, a `bit more time-consuming` because it `depends on external things` and is `more prone to failure`. Because if the database is down or if the file cannot be written, the test will fail.
+
+An `end-to-end test`, also known as a `point-to-point test`, is when we are creating a desktop application, for example, something like Word, an end-to-end test means opening this finished application and testing it, clicking the buttons, seeing what happens. In other words, it is a `test from the user's perspective`, of who will use that program. Besides being `very slow`, it is also `very prone to failure`. If a button changes place, the test fails, etc.
+
+That’s why this pyramid is like this: you should have many unit tests, some integration tests, and end-to-end tests only for the most important aspects of your system, whether it’s your game, your desktop application, etc.
+
+With this, we conclude this training. Again, we covered a lot of things, we talked about tests themselves and what they are. We talked about the tool `Catch2`, which is one of the many automated testing tools in C++. We talked about how to organize our tests with `generators`, `sections`, and `test cases`.
+
+We saw how to `optimize the compilation of our tests` by separating them into different files. We learned about the `TDD technique`, which consists of `creating the test before the code`. We practiced a lot of this.
+
+---
+</details>
+
+![image](https://github.com/parisi18/all-cpp/assets/66031419/2161be77-efde-40c5-bd5e-ec69693f361b)
+
+![image](https://github.com/parisi18/all-cpp/assets/66031419/26f0dd35-3978-4365-8264-d94f356f50ec)
+
 
 </details>
 
