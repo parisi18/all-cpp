@@ -55,7 +55,7 @@ private:
     MyString m_name;
 public:
     MyUser(const MyString& user_name) : m_name(user_name){} // Copy constructor
-    MyUser(MyString&& user_name) : m_name((MyString&&) user_name){} // Move constructor
+    MyUser(MyString&& user_name) : m_name(std::move(user_name)){} // Move constructor
 };
 
 int main(){
