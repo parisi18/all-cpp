@@ -22,6 +22,7 @@ int main(){
     std::cout << "---------------------------------" << std::endl;
     
     // *** SSO (Small String Optimization) ***
+
     // If the string is small enough, it will be stored in the stack
     std::string couple = "John Doe & Jane Doe";
 
@@ -42,6 +43,8 @@ int main(){
 
     show_user_name(user_shared);
 
+    // *** Move Semantics ***
+
     // L-value reference
     // What is an L-value reference?
     // An L-value reference is a reference that binds to an L-value.
@@ -59,6 +62,6 @@ int main(){
     auction.receive_bid(bid1); // l-value reference
     auction.receive_bid(Bid(User("John Doe"), 300)); // r-value reference
 
-    
+
     return 0;
 }
