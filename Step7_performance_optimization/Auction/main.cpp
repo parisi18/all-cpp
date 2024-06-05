@@ -19,11 +19,11 @@ int main(){
 
     // The following code will not allocate memory using string_view
     //--std=c++17
-    std::string_view rafa_name(couple.c_str(), couple.find("&") - 1);
-    std::string_view ludi_name(couple.c_str() + couple.find("&") + 2);
+    std::string_view first_name(couple.c_str(), couple.find("&") - 1);
+    std::string_view second_name(couple.c_str() + couple.find("&") + 2);
 
-    show_name(rafa_name);
-    show_name(ludi_name);
+    show_name(first_name);
+    show_name(second_name);
 
     // A reference to a char pointer will not allocate memory
     show_name("John Doe");
