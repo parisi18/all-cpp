@@ -3,10 +3,10 @@
 #include <memory>
 #include "User.hpp"
 
-void* operator new(size_t bytes){
-    std::cout << "Allocating " << bytes << " bytes\n";
-    return malloc(bytes);
-}
+// void* operator new(size_t bytes){
+//     std::cout << "Allocating " << bytes << " bytes\n";
+//     return malloc(bytes);
+// }
 
 void show_name(std::string_view name){
     std::cout << name << std::endl;
@@ -17,6 +17,10 @@ void show_user_name(std::shared_ptr<User> user){
 }
 
 int main(){
+    return 0;
+}
+
+int main2(){
     std::cout << "---------------------------------" << std::endl;
     
     // // SSO (Small String Optimization)
