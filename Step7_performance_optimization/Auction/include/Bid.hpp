@@ -8,7 +8,7 @@ class Bid
 {
 public:
     Bid(User user, int amount);
-    Bid(const Bid&);
+    Bid(const Bid&); //copy constructor
     float get_amount() const;    
     std::string get_user_name() const;
 private:

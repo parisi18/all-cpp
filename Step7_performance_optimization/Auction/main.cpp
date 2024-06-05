@@ -1,8 +1,10 @@
 #include <iostream>
 #include <string>
 #include <memory>
-#include "User.hpp"
 
+#include "User.hpp"
+#include "Bid.hpp"
+#include "Auction.hpp"
 // void* operator new(size_t bytes){
 //     std::cout << "Allocating " << bytes << " bytes\n";
 //     return malloc(bytes);
@@ -49,6 +51,14 @@ int main(){
     // What is an R-value reference?
     // An R-value reference is a reference that binds to an R-value.
     // An R-value is an object that DOES NOT occupy an identifiable location in memory (i.e., does not have an address).
+
+    Bid bid1(User("John Doe"), 100);
+    Bid bid2(User("Jane Doe"), 200);
+    Auction auction("A brand new car");
+    
+    auction.receive_bid(bid1); // l-value reference
+    auction.receive_bid(Bid(User("John Doe"), 300)); // r-value reference
+
     
     return 0;
 }
