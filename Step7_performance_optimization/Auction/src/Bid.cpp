@@ -11,3 +11,7 @@ std::string Bid::get_user_name() const
 {
     return m_user.get_name();
 }
+
+Bid::Bid(const Bid& bid) : m_user(bid.m_user), m_amount(bid.m_amount) {
+    std::cout << "Copying bid: " << m_amount << std::endl;
+}

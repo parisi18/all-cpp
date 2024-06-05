@@ -2,11 +2,13 @@
 
 #include "User.hpp"
 #include <string>
+#include <iostream>
 
 class Bid
 {
 public:
     Bid(User user, int amount);
+    Bid(const Bid&);
     float get_amount() const;    
     std::string get_user_name() const;
 private:
