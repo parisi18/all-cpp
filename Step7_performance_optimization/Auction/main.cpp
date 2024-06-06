@@ -111,7 +111,7 @@ int main(){
     // This optimization is called copy elision.
     // Copy elision is mandatory in C++17, but it is optional in C++11 and C++14.
 
-    MyUser(MyString("John Doe"));
+    MyUser(MyString("John Doe")); // Move constructor
 
     return 0;
 }
