@@ -164,7 +164,7 @@ g++ Step4_oop_inheritance/src/*.cpp -o Step4_oop_inheritance/src/bank.o && ./Ste
 ⚠️ I added the `namespaces`: `AccountType`, `AtmOption`, and `Login` on my own, to facilitate the understanding of some decisions. Furthermore, the teachings of the course were adapted to my example! 🇺🇸
 
 <details>
-<summary>ORIENTAÇÃO A OBJETOS COM C++: TRABALHANDO COM HERANÇA 🇧🇷 </summary>  
+<summary>ORIENTAÇÃO A OBJETOS COM C++: TRABALHANDO COM HERANÇA 🇧🇷</summary>  
 Congratulations on completing this Object-Oriented Programming with C++ training.
 
 We learned about `inheritance`. For example, we have a `SavingsAccount` that inherits from `Account`. We understood what inheritance is, what it is for, etc.
@@ -252,12 +252,12 @@ Not only templates, but C++ as a language itself, still has a lot more to study,
 g++ -I Step6_tdd_catch2/Auction/include/ Step6_tdd_catch2/Auction/src/* Step6_tdd_catch2/Auction/tests/main-test.cpp Step6_tdd_catch2/Auction/tests/test-auction.cpp -o Step6_tdd_catch2/Auction/tests/test-auction.o && ./Step6_tdd_catch2/Auction/tests/test-auction.o -s
 ```
 
-## Testes do Avaliador 🇧🇷 // Evaluator tests  🇺🇸:
+## Testes do Avaliador 🇧🇷 // Evaluator tests 🇺🇸:
 ```
 g++ -I Step6_tdd_catch2/Auction/include/ Step6_tdd_catch2/Auction/src/* Step6_tdd_catch2/Auction/tests/main-test.cpp Step6_tdd_catch2/Auction/tests/test-evaluator.cpp -o Step6_tdd_catch2/Auction/tests/test-evaluator.o && ./Step6_tdd_catch2/Auction/tests/test-evaluator.o -s
 ```
 
-## Testes do Usuário 🇧🇷 // User tests  🇺🇸:
+## Testes do Usuário 🇧🇷 // User tests 🇺🇸:
 ```
 g++ -I Step6_tdd_catch2/Auction/include/ Step6_tdd_catch2/Auction/src/* Step6_tdd_catch2/Auction/tests/main-test.cpp Step6_tdd_catch2/Auction/tests/test-user.cpp -o Step6_tdd_catch2/Auction/tests/test-user.o && ./Step6_tdd_catch2/Auction/tests/test-user.o -s
 ```
@@ -294,7 +294,7 @@ Vimos como `otimizarmos a compilação do nosso teste` separando em arquivos sep
 </details>
 
 <details>
-<summary>C++ AND TDD: UNIT TESTS WITH CATCH2  🇺🇸</summary>  
+<summary>C++ AND TDD: UNIT TESTS WITH CATCH2 🇺🇸</summary>  
 
 Congratulations on reaching the end of this important training on automated testing using C++!
 
@@ -333,7 +333,36 @@ We saw how to `optimize the compilation of our tests` by separating them into di
 </details>
 
 <details>
-<summary>C++ Journey 7/7 </summary>
+<summary>C++ Journey 7/7  ✔️</summary>
+
+<details>
+<summary>AVANÇANDO COM C++: PERFORMANCE E OTIMIZAÇÃO 🇧🇷</summary>  
+  
+Parabéns por ter chegado ao final de mais um treinamento de C++. 
+
+Nesse treinamento nós avançamos muito nos nossos conhecimentos, aprendemos `recursos avançados do C++`, falamos um pouco de `performance` e vimos sobre `cópia de dados`, `L-value`, `R-value`, então aprendemos bastante coisas - coisas muito interessantes!
+
+Se tudo der certo, não vamos precisar implementar `copy constructors`, `move constructors`; mas se precisarmos, ou quando precisarmos, o conhecimento já estará aqui e nós estaremos aptos para isso.
+
+Lembrando que se você usa `smart pointers` e se você deixa que o C++ te ajude a gerenciar os recursos, nós não precisamos desse conhecimento. Só que se você precisar de um controle maior, pegar o controle do C++ e falar que não quer usar o vector dele, a string dele e que quer criar os seus próprios, nesse momento inevitavelmente esse tipo de conhecimento vai ser fundamental e obrigatório!
+
+</details>
+
+<details>
+<summary>MOVING FORWARD WITH C++: PERFORMANCE AND OPTIMIZATION 🇺🇸</summary>  
+  
+Congratulations on reaching the end of another C++ training.
+
+In this training, we have advanced significantly in our knowledge, learning about `advanced C++ features`, discussing `performance`, and exploring `data copying`, `L-value`, and `R-value`. We've covered a lot - very interesting topics!
+
+Ideally, we won't need to implement `copy constructors` or `move constructors`; but if we do, or when we do, the knowledge will already be here and we will be prepared for it.
+
+Remember that if you use `smart pointers` and let C++ help manage resources, we don't need this knowledge. However, if you need greater control, if you want to take control of C++ and decide not to use its vector, its string, and create your own, at that moment, this type of knowledge will be fundamental and mandatory!
+
+</details>
+
+![image](https://github.com/parisi18/all-cpp/assets/66031419/c1d2dee8-3681-45dc-a9a1-1df444c9d3ba)
+![image](https://github.com/parisi18/all-cpp/assets/66031419/1558308a-870d-4b06-b08f-32e3d649136d)
 
 
 </details>
