@@ -374,4 +374,8 @@ Remember that if you use `smart pointers` and let C++ help manage resources, we 
 </details>
 
 
+![image](https://github.com/parisi18/all-cpp/assets/66031419/16094765-f175-458a-8f80-66ddd71e3eb4)
+![image](https://github.com/parisi18/all-cpp/assets/66031419/ad33e086-4e4b-4e94-b1cb-cb109fb005ba)
+![image](https://github.com/parisi18/all-cpp/assets/66031419/9e580b85-91cf-4dcf-bc38-1f8289a94196)
+![image](https://github.com/parisi18/all-cpp/assets/66031419/08aba9d6-f32c-449d-ad69-1756d6e870ba)
 
